@@ -4,6 +4,16 @@ function tutorial_theme_support()
     add_theme_support("title-tag");
 }
 
+function tutorial_menus()
+{
+    $locations = array(
+        "primary" => "Desktop Menu Item",
+        "footer" => "Footer Menu Item",
+    );
+
+    register_nav_menus($locations);
+}
+
 function tutorial_register_styles()
 {
     $version = wp_get_theme()->get("Version");
@@ -63,6 +73,7 @@ function tutorial_register_scripts()
     );
 }
 
+add_action("init", "tutorial_menus");
 add_action("after_setup_theme", "tutorial_theme_support");
 add_action("wp_enqueue_scripts", "tutorial_register_styles");
 add_action("wp_enqueue_scripts", "tutorial_register_scripts");
