@@ -8,7 +8,7 @@
         </button>
 
         <div id="navigation" class="collapse navbar-collapse flex-column">
-            <img class="mb-3 mx-auto logo" src="images/logo.webp" alt="logo">
+            <img class="mb-3 mx-auto logo" src="wp-content/themes/wp-theme-tutorial/assets/images/logo.webp" alt="logo">
 
             <?php
             wp_nav_menu(

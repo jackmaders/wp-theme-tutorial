@@ -73,7 +73,7 @@ function tutorial_register_scripts()
     );
 }
 
-add_action("init", "tutorial_menus");
+add_action("init", "tutorial_theme_support");
 add_action("after_setup_theme", "tutorial_theme_support");
 add_action("wp_enqueue_scripts", "tutorial_register_styles");
 add_action("wp_enqueue_scripts", "tutorial_register_scripts");
