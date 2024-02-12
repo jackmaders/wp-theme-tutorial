@@ -75,7 +75,35 @@ function tutorial_register_scripts()
     );
 }
 
+function tutorial_widget_areas()
+{
+    register_sidebar(
+        array(
+            "before_title" => '',
+            "after_title" => '',
+            "before_widget" => '',
+            "after_widget" => '',
+            "name" => "Sidebar Area",
+            "id" => "sidebar-widget-area",
+            "description" => "Sidebar Widget Area",
+        )
+    );
+
+    register_sidebar(
+        array(
+            "before_title" => '',
+            "after_title" => '',
+            "before_widget" => '',
+            "after_widget" => '',
+            "name" => "Footer Area",
+            "id" => "footer-widget-area",
+            "description" => "Footer Widget Area",
+        )
+    );
+}
+
 add_action("init", "tutorial_theme_support");
 add_action("after_setup_theme", "tutorial_theme_support");
 add_action("wp_enqueue_scripts", "tutorial_register_styles");
 add_action("wp_enqueue_scripts", "tutorial_register_scripts");
+add_action("widgets_init", "tutorial_widget_areas");
